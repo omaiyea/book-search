@@ -1,0 +1,11 @@
+.filters{
+    background-color: #700f3b;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px;
+}
+p{
+    margin: 0;
+}

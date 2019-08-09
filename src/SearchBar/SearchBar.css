@@ -1,0 +1,11 @@
+.search__bar{
+    background-color: #4e0a2a;
+    color: white;
+    padding: 20px 0px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input{
+    margin: 0px 5px;
+}

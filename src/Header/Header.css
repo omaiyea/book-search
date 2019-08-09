@@ -1,0 +1,11 @@
+.main__header{
+    padding: 25px 5px;
+    margin: 0;
+    background-color: #260415;
+    color: white;
+}
+
+h2.main__header{
+    text-align: center;
+    font-size: 3rem;
+}
