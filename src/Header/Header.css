@@ -9,3 +9,8 @@ h2.main__header{
     text-align: center;
     font-size: 3rem;
 }
+
+label{
+    font-weight: bold;
+    font-size: 1.15em;
+}

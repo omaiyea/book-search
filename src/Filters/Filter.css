@@ -9,3 +9,20 @@
 p{
     margin: 0;
 }
+
+select{
+    cursor: pointer;
+    font-size: 1.25em;
+    padding: 10px;
+    width: 120px;
+}
+
+option{
+    padding: 10px;
+}
+
+@media screen and (min-width: 800px){
+    select{
+        width: 300px;
+    } 
+}

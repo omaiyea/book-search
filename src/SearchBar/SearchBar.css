@@ -9,3 +9,22 @@
 input{
     margin: 0px 5px;
 }
+
+input[type="text"]{
+    border-radius:15px; 
+    width: 40%;
+    padding: 5px;
+    height: 30px;
+    font-size: 1em;
+}
+
+input[type="button"]{
+    cursor: pointer;
+    width: 100px;
+    font-size: 1.15em;
+    padding: 10px;
+    background-color: #c9356e;
+    border: 1px #c9356e solid;
+    color: white;
+    border-radius:15px; 
+}
