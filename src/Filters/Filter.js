@@ -7,8 +7,8 @@ export default class Filter extends React.Component{
     render(){
         return(
             <div className="filters">
-                <PrintFilter />
-                <BookFilter />
+                <PrintFilter onTypeChange={this.props.onTypeChange} />
+                <BookFilter onFilterChange={this.props.onFilterChange} />
             </div>
         )
     }

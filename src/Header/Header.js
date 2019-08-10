@@ -8,8 +8,14 @@ export default class Header extends React.Component{
         return(
             <header>
                 <h2 className="main__header">Google Book Search</h2>
-                <SearchBar />
-                <Filter />
+                <SearchBar 
+                  selectedSearch={this.props.selected.q}
+                  onChange={this.props.queryHandler}
+                />
+                <Filter 
+                  onTypeChange={this.props.typeHandler}
+                  onFilterChange={this.props.filterHandler}
+                />
             </header>
         );
     }
