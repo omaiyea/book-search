@@ -9,6 +9,8 @@ class App extends React.Component {
         filter: 'All',
         printType: 'all',
         q: '',
+        error: '',
+        results: {},
     };
   }
 
@@ -34,6 +36,30 @@ class App extends React.Component {
     });
   }
 
+  fetchResults(){
+    let url = 'https://www.googleapis.com/books/v1/volumes?';
+    const key;
+    url += 'q=' + this.state.q + '&key=' + key;
+    fetch(url)
+    .then(res => {
+        if(!res.ok) {
+            throw new Error('Something went wrong, please try again later');
+        }
+        return res.json();
+    })
+    .then(data => {
+      this.setState({
+        results: data.items
+      });
+    })
+    .catch(err => {
+        this.setState({
+            error: err.message
+        });
+    });
+    console.log(url);
+  }
+
   render(){
     return (
       <div>
@@ -41,8 +67,12 @@ class App extends React.Component {
           selected={this.state} 
           filterHandler={selected => this.setFilter(selected)}
           typeHandler={selected => this.setType(selected)}
-          queryHandler={selected => this.setQuery(selected)}/>
-        <BookList />
+          queryHandler={selected => this.setQuery(selected)}
+          submitHandler={() => this.fetchResults()}/>
+        <BookList 
+          data={this.state.results}
+          bookFilter={this.state.filter}
+          printType={this.state.printType}/>
       </div>
     );
   }

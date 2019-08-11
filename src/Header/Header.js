@@ -11,6 +11,7 @@ export default class Header extends React.Component{
                 <SearchBar 
                   selectedSearch={this.props.selected.q}
                   onChange={this.props.queryHandler}
+                  onSubmit={this.props.submitHandler}
                 />
                 <Filter 
                   onTypeChange={this.props.typeHandler}

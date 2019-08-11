@@ -10,7 +10,7 @@ export default class SearchBar extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        console.log('call api after this');
+        this.props.onSubmit();
     }
 
     handleUpdate(e){
