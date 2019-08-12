@@ -7,7 +7,7 @@ class App extends React.Component {
     super(props);
     this.state = {
         filter: 'All',
-        printType: 'all',
+        type: 'all',
         q: '',
         error: '',
         results: {},
@@ -38,7 +38,7 @@ class App extends React.Component {
 
   fetchResults(){
     let url = 'https://www.googleapis.com/books/v1/volumes?';
-    const key;
+    //const key;
     url += 'q=' + this.state.q + '&key=' + key;
     fetch(url)
     .then(res => {
@@ -72,7 +72,7 @@ class App extends React.Component {
         <BookList 
           data={this.state.results}
           bookFilter={this.state.filter}
-          printType={this.state.printType}/>
+          printType={this.state.type}/>
       </div>
     );
   }
