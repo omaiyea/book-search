@@ -1,0 +1,22 @@
+.book__list{
+    padding: 0px 30px;
+}
+
+b{
+    color: #4E0A2B;
+}
+
+.book img{
+    float: left;
+    padding: 10px 10px 20px 0px;
+}
+
+.book h2{
+    background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #c14d8385 65%);
+    display: inline;
+}
+
+.book{
+    clear: both;
+    padding: 10px 0px;
+}

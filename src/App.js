@@ -36,10 +36,9 @@ class App extends React.Component {
     });
   }
 
-  fetchResults(){
-    let url = 'https://www.googleapis.com/books/v1/volumes?';
-    //const key;
-    url += 'q=' + this.state.q + '&key=' + key;
+  fetchResults(text){
+    const key = 'AIzaSyDJF3Y9240vT33ZIxwTg1CSK7VPUji_xUc';
+    let url = `https://www.googleapis.com/books/v1/volumes?q=${this.state.q}&printType=books&key=${key}`;
     fetch(url)
     .then(res => {
         if(!res.ok) {
@@ -68,7 +67,7 @@ class App extends React.Component {
           filterHandler={selected => this.setFilter(selected)}
           typeHandler={selected => this.setType(selected)}
           queryHandler={selected => this.setQuery(selected)}
-          submitHandler={() => this.fetchResults()}/>
+          submitHandler={(text) => this.fetchResults(text)}/>
         <BookList 
           data={this.state.results}
           bookFilter={this.state.filter}
