@@ -6,16 +6,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        filter: 'All',
-        type: 'all',
+        filter: 'No filter',
+        type: 'All',
         q: '',
         error: '',
         results: {},
     };
-  }
-
-  componentDidMount(){
-    console.log('here');
   }
 
   setFilter(filter) {

@@ -11,7 +11,7 @@ export default class BookFilter extends React.Component{
     }
 
     render(){
-        const bookFilters = ["No Filter", "Partial", "Full", "Free-eBooks", "Paid-eBooks", "eBooks"];
+        const bookFilters = ["No Filter","eBooks", "Print Books"];
         const bookOptions = bookFilters.map((filter, key) => 
             <option value={filter} key={key} name="filter">{filter}</option>);
         return(
