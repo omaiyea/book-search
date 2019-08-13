@@ -33,8 +33,8 @@ class App extends React.Component {
   }
 
   fetchResults(text){
-    const key = 'AIzaSyDJF3Y9240vT33ZIxwTg1CSK7VPUji_xUc';
-    let url = `https://www.googleapis.com/books/v1/volumes?q=${this.state.q}&printType=books&key=${key}`;
+    const key = '';
+    let url = `https://www.googleapis.com/books/v1/volumes?q=${this.state.q}&key=${key}`;
     fetch(url)
     .then(res => {
         if(!res.ok) {
