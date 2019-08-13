@@ -13,9 +13,10 @@ body {
 
 h2 {
   font-family: 'Noto Serif', serif;
+  font-size: 2em;
 }
 
-p, form, input{
+p, form, input, a{
   font-family: 'Noto Sans', sans-serif;
 }
 

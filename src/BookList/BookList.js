@@ -31,9 +31,12 @@ export default class BookList extends React.Component{
             <div className="book" key={key}>
                 <h2>{this.props.data[key].volumeInfo.title}</h2>
                 {this.props.data[key].volumeInfo.imageLinks ? <img src={this.props.data[key].volumeInfo.imageLinks.thumbnail} alt="book cover" /> : ''}
-                <p>{this.props.data[key].volumeInfo.authors ? 'Author: ' + this.props.data[key].volumeInfo.authors[0] : 'No Author Listed'}</p>
-                <p>{this.props.data[key].saleInfo.saleability === 'FOR_SALE' ? 'Price: ' + this.props.data[key].saleInfo.retailPrice.amount + ' ' + this.props.data[key].saleInfo.retailPrice.currencyCode : 'Not for sale'}</p><br/>
-                <p>{this.props.data[key].searchInfo ? this.props.data[key].searchInfo.textSnippet : 'No Snippet Available'}</p><br/>
+                <div className="info">
+                    <p>{this.props.data[key].volumeInfo.authors ? 'Author: ' + this.props.data[key].volumeInfo.authors[0] : 'No Author Listed'}</p>
+                    <p>{this.props.data[key].saleInfo.saleability === 'FOR_SALE' ? 'Price: ' + this.props.data[key].saleInfo.retailPrice.amount + ' ' + this.props.data[key].saleInfo.retailPrice.currencyCode : 'Not for sale'}</p>
+                    <a href={this.props.data[key].volumeInfo.infoLink} target="blank">More Info</a>
+                </div><br />
+                <p className="desc">{this.props.data[key].searchInfo ? this.props.data[key].searchInfo.textSnippet : 'No Snippet Available'}</p><br/>
             </div>);
         return(
             <div className="book__list">
@@ -43,7 +46,6 @@ export default class BookList extends React.Component{
     }
 }
 
-//                <p>See more information on  </p><a href={this.props.data[key].infoLink} target="blank">Google Books</a><p>.</p>
 
       
                 

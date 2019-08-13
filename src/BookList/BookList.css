@@ -2,10 +2,6 @@
     padding: 0px 30px;
 }
 
-b{
-    color: #4E0A2B;
-}
-
 .book img{
     float: left;
     padding: 10px 10px 20px 0px;
@@ -19,4 +15,17 @@ b{
 .book{
     clear: both;
     padding: 10px 0px;
+}
+
+.info p,{
+    color: darkslategrey;
+    font-size: 0.8em;
+}
+
+.info a{
+    color: #4E0A2B;
+}
+
+p.desc{
+    font-size:1.12em;
 }

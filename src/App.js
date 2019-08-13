@@ -64,10 +64,11 @@ class App extends React.Component {
           typeHandler={selected => this.setType(selected)}
           queryHandler={selected => this.setQuery(selected)}
           submitHandler={(text) => this.fetchResults(text)}/>
-        <BookList 
+       {Object.keys(this.state.results).length > 1 ? <BookList 
           data={this.state.results}
           bookFilter={this.state.filter}
-          printType={this.state.type}/>
+          printType={this.state.type}/> : ''}
+        {this.state.error !== '' ? <div className='error__message'><p>{this.state.error}</p></div> : ''}
       </div>
     );
   }
