@@ -1,5 +1,5 @@
 # Book Search 
-Book Search lets you search for books (both e-books and print books) and magazines using Google's Book API. 
+Book Search lets you search for books (both e-books and print books). After you find what you're looking for, you can then navigate to Google Books where you can purchase the book or read more information. 
 
 ## Motivation
 This was built as a simple app to start practicing React.
@@ -12,4 +12,5 @@ React, JSX, CSS
 * Error handling 
 
 ## Screenshots
-#### Search results 
+#### Search results after user entered a term
+<img src="https://github.com/omaiyea/book-search/blob/master/screenshots/search-results.png?raw=true" alt="search results screenshot">
