@@ -33,7 +33,6 @@ class App extends React.Component {
   }
 
   fetchResults(text){
-    const key = '';
     let url = `https://www.googleapis.com/books/v1/volumes?q=${this.state.q}&key=${key}`;
     fetch(url)
     .then(res => {
@@ -56,6 +55,8 @@ class App extends React.Component {
   }
 
   render(){
+    console.log(process.env);
+
     return (
       <div>
         <Header 
