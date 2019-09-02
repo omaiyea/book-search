@@ -7,7 +7,7 @@ This was built as a simple app to start practicing React.
 ## Built With
 React, JSX, CSS
 
-## Future Enhancements
+## Todos
 * Need to handle API key so that a live demo can happen without exposing it
 * Error handling 
 
